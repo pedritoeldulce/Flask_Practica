@@ -16,5 +16,13 @@ def index():
                                         list_students=studens)
 
 
+@app.route("/usuario/<string:last_name>/<string:user_name>/<int:age>")
+def usuario(last_name, user_name, age):
+    try:
+        return "Hola {1} {0}, con {2} años".format(last_name, user_name, age)
+    except E:
+        return "valor de edad no es entero"
+
+
 if __name__ == "__main__":
     app.run(debug= True, port=9000)

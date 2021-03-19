@@ -7,7 +7,13 @@ app = Flask(__name__)
 def index():
     name = "paolo"
     course = "Python Web"
-    return render_template("index.html", username=name, course_name=course)
+    is_premiun = True
+    studens = ["paolo", "noa", "filomena", "pedro"]
+
+    return render_template("index.html", username=name,
+                                        course_name=course,
+                                        is_premiun=is_premiun,
+                                        list_students=studens)
 
 
 if __name__ == "__main__":

@@ -7,6 +7,24 @@
 <body>
     <h2>Hola {{username}}, como estas</h2>
     <h3>Te encuentras en el curso de {{course_name}}</h3>
-    <p>El mensaje s eencuentra dentro de una archivo HTML</p>
+    {% if is_premiun %}
+        <p>Es premiun</p>
+    {% else %}
+        <p>El curso es gratuito para todos</p>
+    {% endif %}
+
+    <br>
+    <h4>Liste de estudiantes</h4>
+    {% if list_students %}
+
+        <ul>
+            {% for student in list_students %}
+            <li>{{student}}</li>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+
+<!--    NOTA: imprimir una variable: {{}}; si se requiere un condicion o ciclo {% %}-->
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <title>Hola mundo</title>
 </head>
 <body>
@@ -24,7 +25,8 @@
         </ul>
 
     {% endif %}
-
-<!--    NOTA: imprimir una variable: {{}}; si se requiere un condicion o ciclo {% %}-->
+    <img src="{{url_for('static', filename='images/tree.jpg')}}" alt="">
+    
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
 </body>
 </html>
